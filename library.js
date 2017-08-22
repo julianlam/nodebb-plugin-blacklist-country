@@ -45,13 +45,17 @@ plugin.test = function (data, callback) {
 		return setImmediate(callback, null, data);
 	}
 
+	// Test IP from Korea:
+	// data.ip = '218.50.221.178';
 	var geo = geoip.lookup(data.ip);
+	var err = undefined;
 
 	if (geo && plugin._settings.blacklist.indexOf(geo.country) !== -1) {
-		data.result = true;
+		err = new Error('[[error:blacklisted-ip]]');
+		err.code = 'blacklisted-ip';
 	}
 
-	callback(null, data);
+	callback(err, data);
 };
 
 plugin.addAdminNavigation = function(header, callback) {

@@ -5,8 +5,9 @@
 	"hooks": [
 		{ "hook": "static:app.load", "method": "init" },
 		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
+		{ "hook": "action:settings.set", "method": "updateSettings" },
 		{ "hook": "filter:blacklist.test", "method": "test" },
-		{ "hook": "action:settings.set", "method": "updateSettings" }
+		{ "hook": "filter:register.check", "method": "test" }
 	],
 	"staticDirs": {
 		"static": "./static"
