@@ -1,20 +1,12 @@
-# Quickstart Plugin for NodeBB
+# Blacklist by Country, for NodeBB
 
-A starter kit for quickly creating NodeBB plugins. Comes with a pre-setup LESS file, server side JS script with an `action:app.load` hook, and a client-side script. Most plugins need at least one of the above, so this ought to save you some time. For a full list of hooks have a look at our [wiki page](https://github.com/NodeBB/NodeBB/wiki/Hooks), and for more information about creating plugins please visit our [documentation portal](https://docs.nodebb.org/).
+This plugin allows administrators to ban entire countries from registering and logging in. Please be aware that this
+is a heavy-handed approach and should not be used lightly (or temporarily)!
 
-Fork this or copy it, and using your favourite text editor find and replace all instances of `nodebb-plugin-quickstart` with `nodebb-plugin-your-plugins-name`. Change the author's name in the LICENSE and package.json files.
+This plugin was made in response to repeated spammers coming only from Korean IP addresses.
 
-Once you're done don't forget to publish it on NPM, and make a thread about it [here](https://docs.nodebb.org/en/latest/plugins/hooks.html).
+Suffering from spammers? Try the following first:
 
-
-## Hello World
-
-Really simple, just edit `static/lib/main.js` and paste in `console.log('hello world');`, and that's it!
-
-## Installation
-
-    npm install nodebb-plugin-quickstart
-
-## Screenshots
-
-Don't forget to add screenshots!
+1. [nodebb-plugin-spam-be-gone](https://www.npmjs.com/package/nodebb-plugin-spam-be-gone)
+1. Blacklist entire IP ranges in the IP Blacklist page (e.g. `123.456.0.0/16`)
+1. If all else fails, try this plugin for a week or so until they give up.
