@@ -1,0 +1,18 @@
+{
+	"id": "nodebb-plugin-blacklist-country",
+	"url": "https://github.com/NodeBB/nodebb-plugin-blacklist-country",
+	"library": "./library.js",
+	"hooks": [
+		{ "hook": "static:app.load", "method": "init" },
+		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
+		{ "hook": "filter:blacklist.test", "method": "test" },
+		{ "hook": "action:settings.set", "method": "updateSettings" }
+	],
+	"staticDirs": {
+		"static": "./static"
+	},
+	"acpScripts": [
+		"static/lib/admin.js"
+	],
+	"templates": "static/templates"
+}

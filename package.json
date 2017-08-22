@@ -1,0 +1,29 @@
+{
+  "name": "nodebb-plugin-blacklist-country",
+  "version": "0.0.0",
+  "description": "",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/julianlam/nodebb-plugin-blacklist-country"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin"
+  ],
+  "author": {
+    "name": "Julian Lam",
+    "email": "julian@nodebb.org"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julianlam/nodebb-plugin-blacklist-country/issues"
+  },
+  "readmeFilename": "README.md",
+  "nbbpm": {
+    "compatibility": "^1.6.0"
+  },
+  "dependencies": {
+    "geoip-lite": "^1.2.1"
+  }
+}
