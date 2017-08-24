@@ -3,6 +3,7 @@
 var controllers = require('./lib/controllers');
 var geoip = require('geoip-lite');
 var meta = module.parent.require('./meta');
+var analytics = module.parent.require('./analytics');
 
 var plugin = {
 	_settings: {
@@ -51,6 +52,7 @@ plugin.test = function (data, callback) {
 	var err = undefined;
 
 	if (geo && plugin._settings.blacklist.indexOf(geo.country) !== -1) {
+		analytics.increment('blacklist');
 		err = new Error('[[error:blacklisted-ip]]');
 		err.code = 'blacklisted-ip';
 	}
